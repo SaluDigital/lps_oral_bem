@@ -657,7 +657,7 @@ a.button[href*="wa.me"]:hover {
 }
 
 .patient-gallery-section {
-  background: rgba(255, 255, 255, 0.02);
+  background: #1B1F37;
 }
 
 .patient-gallery-grid {
@@ -823,9 +823,9 @@ a.button[href*="wa.me"]:hover {
   inset: 0;
   background-image:
     linear-gradient(180deg, rgba(0, 8, 41, 0.74), rgba(0, 8, 41, 0.78)),
-    url("./assets/call2.webp");
+    url("./assets/call-implante.webp");
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-attachment: fixed;
   transform: translateY(-6%) scale(1.14);
   will-change: transform;
@@ -961,6 +961,11 @@ a.button[href*="wa.me"]:hover {
     background-position: calc(50% - 200px) center;
   }
 
+  .final-cta-media {
+    background-attachment: scroll;
+    background-position: calc(50% - 200px) top;
+  }
+
   .cta-banner-card {
     padding: 2rem;
   }
@@ -1041,17 +1046,22 @@ a.button[href*="wa.me"]:hover {
   }
 
   .hero-copy {
-    display: flex;
-    flex-direction: column;
+    display: contents;
   }
 
   .hero-brand {
     order: 1;
+    margin-bottom: 0;
   }
 
   .hero {
     min-height: auto;
-    padding-top: 5rem;
+    padding-top: 2.75rem;
+  }
+
+  .hero-grid {
+    gap: 0.75rem;
+    justify-items: center;
   }
 
   .hero-card {
@@ -1059,24 +1069,52 @@ a.button[href*="wa.me"]:hover {
     display: block;
     width: 100%;
     max-width: 22rem;
-    margin: 1.5rem auto 0;
+    margin: 0.5rem auto 0;
   }
 
   .hero-copy h1 {
     order: 3;
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .hero-copy .lead {
     order: 4;
+    margin-bottom: 0.9rem;
   }
 
   .hero-copy .hero-actions {
     order: 5;
+    margin-top: 0;
   }
 
   .hero h1 {
     max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-copy .lead,
+  .hero-copy .hero-actions,
+  .hero-brand {
+    text-align: center;
+  }
+
+  .hero-brand {
+    width: 100%;
+  }
+
+  .hero-brand img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-copy .lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-copy .hero-actions {
+    justify-content: center;
   }
 
   .faq-list summary {
