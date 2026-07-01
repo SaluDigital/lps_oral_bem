@@ -24,7 +24,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="icon" type="image/webp" href="./assets/favicon.webp" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
-  <body>
+  <body class="modal-open">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MNBDH9G"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -753,7 +753,30 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </div>
     </footer>
 
-    <a
+    <div class="notice-modal is-visible" data-notice-modal role="dialog" aria-modal="true" aria-labelledby="notice-modal-title">
+      <div class="notice-modal-dialog">
+        <button class="notice-modal-close" type="button" data-notice-close aria-label="Fechar aviso">
+          ×
+        </button>
+        <div class="notice-modal-content">
+          <h2 id="notice-modal-title">Atendimento particular</h2>
+          <p>
+            Não atendemos convênio. Os atendimentos são realizados apenas de forma particular.
+          </p>
+          <div class="notice-modal-info">
+            <div class="notice-modal-info-item">
+              <strong>Endereço</strong>
+              <span>Avenida Professor Gomes de Matos, 1150 - Montese, Fortaleza/CE</span>
+            </div>
+            <div class="notice-modal-info-item">
+              <strong>Horário de atendimento</strong>
+              <span>Segunda a sexta: 07h às 18h</span><br />
+              <span>Sábado: 07h às 13h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./script.js"></script>
     <script src="https://plugin.sellbot.tech/assets/js/sellbot_plugin.min.js"></script>

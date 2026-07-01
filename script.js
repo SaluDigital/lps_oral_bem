@@ -12,6 +12,7 @@ const finalCtaMedia = document.querySelector(".final-cta-media");
 const finalCtaSection = document.querySelector(".final-cta");
 const heroVideo = document.getElementById("hero-video");
 const heroVideoToggle = document.getElementById("hero-video-toggle");
+const noticeModal = document.querySelector("[data-notice-modal]");
 let autoplayInterval = null;
 let heroAudioUnlocked = false;
 
@@ -165,6 +166,29 @@ if (heroVideo && heroVideoToggle) {
     heroAudioUnlocked = enableSound;
     heroVideoToggle.classList.toggle("is-on", enableSound);
     heroVideoToggle.setAttribute("aria-label", enableSound ? "Desativar som" : "Ativar som");
+  });
+}
+
+function closeNoticeModal() {
+  if (!noticeModal) return;
+  noticeModal.classList.remove("is-visible");
+  document.body.classList.remove("modal-open");
+}
+
+if (noticeModal) {
+  noticeModal.classList.add("is-visible");
+  document.body.classList.add("modal-open");
+
+  noticeModal.addEventListener("click", (event) => {
+    if (event.target instanceof HTMLElement && event.target.hasAttribute("data-notice-close")) {
+      closeNoticeModal();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && noticeModal.classList.contains("is-visible")) {
+      closeNoticeModal();
+    }
   });
 }
 
