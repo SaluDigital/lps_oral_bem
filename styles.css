@@ -200,7 +200,7 @@ a.button[href*="wa.me"]:hover {
   position: fixed;
   right: 1.35rem;
   bottom: 1.35rem;
-  z-index: 90;
+  z-index: 140;
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
